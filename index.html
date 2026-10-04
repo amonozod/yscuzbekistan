@@ -1,0 +1,1492 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Youth Shadow Cabinet Uzbekistan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --paper:#f5f7fc;
+    --paper-raised:#eaeffa;
+    --ink-panel:#0f2159;
+    --ink-panel-2:#15306f;
+    --text:#13182a;
+    --text-soft:#49506b;
+    --text-faint:#828aa8;
+    --line:#dde3f3;
+    --line-strong:#b9c3e3;
+    --accent:#c21f1a;
+    --accent-ink:#fdfcfa;
+    --blue:#1d3fb0;
+    --blue-ink:#fdfcfa;
+    --blue-soft:#e3eafc;
+    --on-panel:#fdfcfa;
+    --on-panel-soft:#4b5156;
+    --accent-on-dark:#ff6b5e;
+    --blue-on-dark:#6f9bff;
+    --focus:#1d3fb0;
+    --status-amber:#8a5a12;
+    --status-amber-bg:#f1e6ce;
+    --status-green:#285e3f;
+    --status-green-bg:#dde7de;
+    --shadow: 0 1px 2px rgba(15,33,89,.07), 0 10px 28px rgba(15,33,89,.1);
+    --radius: 2px;
+    --surface-strong:#0f2159;
+    --surface-strong-line:rgba(253,252,250,.16);
+    --on-strong:#fdfcfa;
+    --on-strong-soft:#aab6e0;
+    --on-strong-faint:rgba(253,252,250,.05);
+    --accent-strong:#ff6b5e;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%; scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0;
+    background-color:var(--paper);
+    color:var(--text);
+    font-family:'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-size:16px;
+    line-height:1.6;
+    padding-inline:20px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-weight:600;
+    line-height:1.12;
+    text-wrap:balance;
+    margin:0;
+    color:var(--text);
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  img{max-width:100%;}
+  ::selection{background:var(--accent); color:var(--accent-ink);}
+  button{font-family:inherit;}
+  :focus-visible{outline:2px solid var(--focus); outline-offset:2px;}
+  .mono{font-family:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;}
+
+  .wrap{max-width:1120px; margin-inline:auto;}
+  .prose{max-width:62ch;}
+
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    gap:.6em;
+    margin-bottom:.9rem;
+  }
+  .eyebrow .num{color:var(--text-faint);}
+
+  /* ===== Header ===== */
+  .scroll-progress{
+    position:absolute; left:0; bottom:-1px; height:2px; width:0%;
+    background:linear-gradient(90deg, var(--blue-on-dark), var(--accent-on-dark));
+    transition:width .08s linear;
+    z-index:41;
+  }
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:var(--surface-strong); color:var(--on-strong);
+    margin-inline:-20px; padding-inline:20px;
+    border-bottom:1px solid var(--surface-strong-line);
+    box-shadow:0 6px 24px rgba(10,12,8,.1);
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .nav-shell{
+    max-width:1440px; margin-inline:auto;
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 0;
+    gap:16px;
+  }
+  .brand{display:flex; align-items:center; gap:.65rem; text-decoration:none; min-width:0;}
+  .brand-mark{
+    width:38px; height:38px; flex:none;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .brand-mark img{width:100%; height:100%; object-fit:contain; display:block;}
+  .emblem-img{background:transparent;}
+  .brand-text{display:flex; flex-direction:column; line-height:1.15; min-width:0;}
+  .brand-text b{font-family:'Source Serif 4', serif; font-size:1rem; font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block; color:var(--on-strong);}
+  .brand-text span{font-size:.68rem; color:var(--on-strong-soft); font-family:'JetBrains Mono',monospace; letter-spacing:.03em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+  nav.primary{display:flex; align-items:center; gap:16px;}
+  nav.primary a{
+    position:relative;
+    font-family:'Inter',sans-serif; font-size:.82rem; text-decoration:none; color:var(--on-strong-soft);
+    padding-block:6px; white-space:nowrap;
+    transition:color .2s ease;
+  }
+  nav.primary a::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:2px;
+    background:linear-gradient(90deg, var(--blue-on-dark), var(--accent-on-dark));
+    transform:scaleX(0); transform-origin:left; transition:transform .28s cubic-bezier(.16,1,.3,1);
+  }
+  nav.primary a:hover{color:var(--on-strong);}
+  nav.primary a:hover::after{transform:scaleX(1);}
+  .nav-apply-mobile{display:none;}
+
+  .lang-switch{display:flex; border:1px solid var(--surface-strong-line); border-radius:4px; overflow:hidden; flex:none;}
+  .lang-switch button{
+    background:none; border:none; padding:6px 9px; font-size:.72rem; letter-spacing:.05em;
+    font-family:'JetBrains Mono',monospace; color:var(--on-strong-soft); cursor:pointer; border-right:1px solid var(--surface-strong-line);
+  }
+  .lang-switch button:last-child{border-right:none;}
+  .lang-switch button[aria-pressed="true"]{background:var(--blue); color:var(--blue-ink);}
+
+  .btn{
+    font-family:'Inter',sans-serif;
+    display:inline-flex; align-items:center; gap:.5em;
+    padding:.72em 1.3em; border-radius:2px; font-size:.84rem; font-weight:600;
+    text-decoration:none; cursor:pointer; border:1px solid transparent; white-space:nowrap;
+    transition:transform .2s cubic-bezier(.16,1,.3,1), box-shadow .2s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:active{transform:translateY(1px) scale(.98);}
+  .btn-accent{background:var(--accent); color:var(--accent-ink);}
+  .btn-accent:hover{background:color-mix(in srgb, var(--accent) 85%, black 8%); transform:translateY(-2px); box-shadow:0 10px 22px rgba(185,31,26,.28);}
+  .btn-ghost{background:transparent; color:var(--text); border-color:var(--line-strong);}
+  .btn-ghost:hover{border-color:var(--blue); color:var(--blue); transform:translateY(-2px); box-shadow:0 10px 22px rgba(29,78,214,.14);}
+  .btn-on-panel{background:var(--on-panel); color:var(--ink-panel);}
+  .btn-on-panel:hover{background:#fff;}
+  .btn-outline-panel{background:transparent; color:var(--on-strong); border-color:var(--surface-strong-line);}
+  .btn-outline-panel:hover{border-color:var(--on-strong);}
+
+  .menu-toggle{display:none; background:none; border:1px solid var(--surface-strong-line); border-radius:4px; padding:7px 10px; cursor:pointer;}
+  .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after{
+    content:""; display:block; width:18px; height:1.5px; background:var(--on-strong); position:relative;
+  }
+  .menu-toggle span::before{position:absolute; top:-6px;}
+  .menu-toggle span::after{position:absolute; top:6px;}
+
+  /* ===== Hero — front page lead story ===== */
+  .hero{
+    background:var(--paper);
+    color:var(--text);
+    margin-inline:-20px; padding-inline:20px;
+    border-bottom:4px solid var(--text);
+  }
+  .hero-inner{
+    max-width:1200px; margin-inline:auto; padding-block:36px 0;
+  }
+  .reveal-in{animation:hero-rise .68s cubic-bezier(.16,1,.3,1) both;}
+  @keyframes hero-rise{from{opacity:0; transform:translateY(16px);} to{opacity:1; transform:translateY(0);}}
+  @media (prefers-reduced-motion: reduce){ .reveal-in{animation:none;} }
+
+  /* Masthead — front-page dateline + headline */
+  .masthead{padding-bottom:28px;}
+  .masthead-kicker{
+    font-family:'Inter',sans-serif; font-weight:700; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--blue); display:flex; flex-wrap:wrap; gap:9px; align-items:center; margin-bottom:18px;
+  }
+  .masthead-kicker::before{
+    content:""; display:inline-block; width:7px; height:7px;
+    background:var(--blue);
+  }
+  .masthead-kicker .mk-sep{opacity:.5; color:var(--text-faint);}
+  .masthead-wordmark{
+    font-family:'Source Serif 4',serif; font-weight:700; font-size:clamp(2.6rem, 6.4vw, 4.8rem);
+    line-height:1; letter-spacing:-.02em; color:var(--text); text-wrap:balance; margin:0;
+  }
+  .masthead-wordmark em{font-style:italic; color:var(--accent);}
+  .masthead-rule{display:flex; gap:6px; margin-top:20px;}
+  .masthead-rule span{display:block; height:4px; width:46px; background:var(--blue);}
+  .masthead-rule span:last-child{background:var(--accent); width:22px;}
+
+  .hero-grid{
+    display:grid; grid-template-columns:1.2fr .8fr; gap:48px; align-items:start;
+    padding-top:28px; margin-top:28px; border-top:1px solid var(--line-strong);
+  }
+  .hero-copy{display:grid; gap:22px; max-width:640px;}
+  .hero .lede{
+    font-family:'Source Serif 4',serif; font-style:italic; font-weight:500;
+    font-size:1.3rem; line-height:1.45; color:var(--text); max-width:46ch;
+  }
+  .hero-byline{
+    font-family:'Inter',sans-serif; font-size:.74rem; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--text-faint); padding-top:14px; border-top:1px solid var(--line);
+  }
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:12px;}
+  .hero-start{
+    display:inline-flex; align-items:center; gap:8px; align-self:start;
+    border:1px solid var(--line-strong); border-radius:2px; padding:7px 14px 7px 8px;
+    font-family:'Inter',sans-serif; font-size:.8rem; color:var(--text-soft); text-decoration:none;
+  }
+  .hero-start:hover{border-color:var(--blue); color:var(--blue);}
+  .hero-start .q{
+    display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; border-radius:50%;
+    border:1px solid currentColor; font-size:.68rem; flex:none;
+  }
+  .hero-note{
+    display:flex; gap:14px; align-items:flex-start;
+    border-left:3px solid var(--blue);
+    background:var(--paper-raised); padding:16px 18px; max-width:64ch;
+  }
+  .hero-note p{font-family:'Inter',sans-serif; font-size:.86rem; color:var(--text-soft); line-height:1.6;}
+  .hero-note .mark{font-family:'Source Serif 4',serif; font-style:italic; color:var(--text); flex:none; font-size:1.4rem;}
+
+  .hero-graphic{position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:4px;}
+  .hg-glow{display:none;}
+  .hg-ring{display:none;}
+  .doc-stack{position:relative; width:100%; max-width:340px; aspect-ratio:3/4; cursor:pointer; perspective:900px; --tx:0deg; --ty:0deg;}
+  .doc-stack:focus-visible{outline:none;}
+  .doc-stack:focus-visible .doc-front{outline:2px solid var(--focus); outline-offset:4px;}
+  .doc-card{
+    position:absolute; inset:0; border-radius:4px;
+    background:var(--paper-raised); border:1px solid var(--line-strong);
+    box-shadow:0 18px 40px rgba(0,0,0,.55);
+    transition:transform .32s ease;
+  }
+  .doc-back{
+    transform:rotate(-7deg) translate(-4%,3%); background:#d6deef; opacity:.8;
+    animation:doc-deal-back .6s cubic-bezier(.2,.8,.2,1) both; animation-delay:.5s;
+  }
+  @keyframes doc-deal-back{
+    from{ opacity:0; transform:rotate(-20deg) translate(-14%,12%) scale(.88); }
+    to{ opacity:.8; transform:rotate(-7deg) translate(-4%,3%) scale(1); }
+  }
+  .doc-mid{
+    transform:rotate(4deg) translate(3%,1%); background:#e3e9f7; opacity:.9;
+    animation:doc-deal-mid .6s cubic-bezier(.2,.8,.2,1) both; animation-delay:.62s;
+  }
+  @keyframes doc-deal-mid{
+    from{ opacity:0; transform:rotate(18deg) translate(11%,10%) scale(.88); }
+    to{ opacity:.88; transform:rotate(4deg) translate(3%,1%) scale(1); }
+  }
+  .doc-stack[data-shuffle="1"] .doc-back{ transform:rotate(-4deg) translate(-3%,4%); }
+  .doc-stack[data-shuffle="1"] .doc-mid{ transform:rotate(7deg) translate(4%,-1%); }
+  .doc-stack[data-shuffle="2"] .doc-back{ transform:rotate(-9deg) translate(-5%,1%); }
+  .doc-stack[data-shuffle="2"] .doc-mid{ transform:rotate(3deg) translate(2%,3%); }
+  .doc-stack:hover .doc-front{ transform:rotate(-1.5deg) translateY(-4px) rotateX(var(--ty)) rotateY(var(--tx)); }
+  .doc-front{
+    transform:rotate(-1.5deg);
+    transform-style:preserve-3d;
+    display:flex; flex-direction:column; gap:14px; padding:22px 22px 20px; color:var(--text);
+    transition:transform .22s ease;
+  }
+  .doc-front.doc-enter{ animation:doc-settle .7s cubic-bezier(.2,.8,.2,1) both; animation-delay:.74s; }
+  @keyframes doc-settle{
+    from{ transform:rotate(-1.5deg) translateY(14px) scale(.97); opacity:0; }
+    to{ transform:rotate(-1.5deg) translateY(0) scale(1); opacity:1; }
+  }
+  .doc-front.is-cycling{ animation:doc-cycle-out .3s ease forwards; animation-delay:0s; }
+  @keyframes doc-cycle-out{
+    to{ transform:rotate(-7deg) translateY(-18px) scale(.94); opacity:0; }
+  }
+  .doc-front.is-entering{ animation:doc-cycle-in .4s cubic-bezier(.2,.8,.2,1) forwards; animation-delay:0s; }
+  @keyframes doc-cycle-in{
+    from{ transform:rotate(6deg) translateY(16px) scale(.95); opacity:0; }
+    to{ transform:rotate(-1.5deg) translateY(0) scale(1); opacity:1; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .doc-front.doc-enter, .doc-front.is-cycling, .doc-front.is-entering, .doc-back, .doc-mid, .hg-glow, .doc-stamp, .masthead-kicker::before{animation:none;}
+    .doc-card{transition:none;}
+  }
+  .doc-stamp{
+    position:absolute; top:18px; right:18px; width:74px; height:74px; border-radius:50%;
+    border:1.5px dashed var(--accent); color:var(--accent); display:flex; align-items:center; justify-content:center;
+    text-align:center; font-family:'JetBrains Mono',monospace; font-size:.58rem; letter-spacing:.1em;
+    text-transform:uppercase; opacity:.85; line-height:1.2; padding:4px; transform:rotate(12deg);
+    animation:stamp-thud .45s cubic-bezier(.34,1.56,.64,1) both; animation-delay:1.32s;
+  }
+  @keyframes stamp-thud{
+    from{ opacity:0; transform:rotate(32deg) scale(1.7); }
+    to{ opacity:.85; transform:rotate(12deg) scale(1); }
+  }
+  .doc-head{display:flex; align-items:center; gap:10px; padding-right:60px;}
+  .doc-head .doc-emblem{width:30px; height:30px; object-fit:contain; flex:none;}
+  .doc-head-text{display:flex; flex-direction:column; gap:2px; min-width:0;}
+  .doc-head-text b{font-family:'Source Serif 4',serif; font-size:.86rem; line-height:1.15; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .doc-head-text span{font-family:'JetBrains Mono',monospace; font-size:.6rem; letter-spacing:.06em; text-transform:uppercase; color:var(--text-faint);}
+  .doc-meta{border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding-block:10px; display:grid; gap:7px;}
+  .doc-meta-row{display:flex; gap:10px; font-size:.72rem;}
+  .doc-meta-row .k{font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.06em; color:var(--text-faint); flex:none; width:38px;}
+  .doc-meta-row .v{color:var(--text-soft); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-family:'JetBrains Mono',monospace;}
+  .doc-body{display:flex; flex-direction:column; gap:9px; flex:1;}
+  .doc-line{display:block; height:6px; border-radius:3px; background:var(--line-strong);}
+  .doc-foot{display:flex; flex-direction:column; gap:8px; align-items:flex-start; border-top:1px solid var(--line); padding-top:12px;}
+  .doc-foot .status-tag{font-size:.64rem;}
+  .doc-sig{font-size:.66rem; color:var(--text-faint); font-style:italic; font-family:'Source Serif 4',serif;}
+
+  .stat-row{
+    display:flex; flex-wrap:wrap; margin-top:40px; margin-bottom:36px;
+    border-top:1px solid var(--line-strong); border-bottom:1px solid var(--line-strong);
+  }
+  .stat{
+    display:flex; flex-direction:column; gap:4px; flex:1; min-width:150px;
+    padding:18px 26px 18px 0; border-right:1px solid var(--line-strong);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .n{font-family:'Source Serif 4',serif; font-size:2rem; font-weight:700; color:var(--blue); line-height:1; font-variant-numeric:tabular-nums;}
+  .stat .l{font-family:'Inter',sans-serif; font-size:.74rem; color:var(--text-soft); margin-top:3px; letter-spacing:.01em; max-width:18ch;}
+  .exhibit-caption{
+    margin-top:4px; text-align:center; font-family:'Inter',sans-serif; font-weight:600; font-size:.66rem;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--text-faint);
+  }
+
+  /* ===== Sections ===== */
+  section{padding-block:64px; border-bottom:1px solid var(--line-strong);}
+  section.tight{padding-block:56px;}
+  .section-head{max-width:70ch; margin-bottom:36px;}
+  .section-head h2{font-size:clamp(1.5rem,2.6vw,2.1rem);}
+  .section-head .lede{color:var(--text-soft); margin-top:12px; font-size:1.02rem; max-width:62ch;}
+  .sr-hidden{opacity:0; transform:translateY(16px); transition:opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1);}
+  .sr-visible{opacity:1; transform:translateY(0);}
+
+  /* About */
+  .about-grid{display:grid; grid-template-columns:1.3fr .9fr; gap:48px; align-items:start;}
+  .about-grid p + p{margin-top:16px;}
+  .about-side{
+    border:1px solid var(--line-strong); border-radius:4px; padding:22px; background:var(--paper-raised);
+    transition:transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease, border-color .3s ease, opacity .5s ease;
+  }
+  .about-side:hover{transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--blue);}
+  .about-side h3{font-size:.85rem; text-transform:uppercase; letter-spacing:.06em; font-family:'JetBrains Mono',monospace; color:var(--text-soft); font-weight:600; margin-bottom:12px;}
+  .about-side ul{margin:0; padding:0; list-style:none; display:grid; gap:10px;}
+  .about-side li{font-size:.92rem; padding-block:8px; border-top:1px solid var(--line);}
+  .about-side li:first-child{border-top:none; padding-top:0;}
+  .about-side li a{text-decoration:none; border-bottom:1px solid var(--line-strong);}
+  .about-side li a:hover{border-color:var(--blue); color:var(--blue);}
+
+  /* Mission */
+  .values-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .value-card{background:var(--paper-raised); padding:24px 20px; display:flex; flex-direction:column; gap:10px; transition:transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease, opacity .5s ease; position:relative; z-index:0;}
+  .value-card:hover{transform:translateY(-5px); box-shadow:var(--shadow); z-index:1;}
+  .value-card .vi{font-family:'JetBrains Mono',monospace; color:var(--blue); font-size:.78rem;}
+  .value-card h3{font-size:1.02rem; font-family:'Source Serif 4',serif;}
+  .value-card p{font-size:.87rem; color:var(--text-soft); line-height:1.55;}
+  .mission-statement{
+    border-left:3px solid var(--accent); padding-left:20px; margin-bottom:32px; max-width:62ch;
+  }
+  .mission-statement p{font-family:'Source Serif 4',serif; font-size:1.2rem; line-height:1.5; font-style:italic;}
+
+  /* How it works */
+  .stepper{display:flex; gap:0; border:1px solid var(--line); border-radius:4px; overflow:hidden;}
+  .step{flex:1; border-right:1px solid var(--line); background:var(--paper-raised);}
+  .step:last-child{border-right:none;}
+  .step-btn{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:20px 16px; display:flex; flex-direction:column; gap:10px; color:var(--text);
+  }
+  .step-btn .sn{font-family:'JetBrains Mono',monospace; font-size:1.3rem; color:var(--text-faint);}
+  .step[data-open="true"] .step-btn .sn{color:var(--blue);}
+  .step-btn .st{font-size:.92rem; font-weight:600; font-family:'Source Serif 4',serif;}
+  .step-panel{max-height:0; overflow:hidden; transition:max-height .28s ease;}
+  .step[data-open="true"] .step-panel{max-height:220px;}
+  .step-panel-inner{padding:0 16px 20px; font-size:.86rem; color:var(--text-soft); line-height:1.6;}
+  .step[data-open="true"]{background:var(--paper);}
+
+  /* Ministries */
+  .ministry-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  .ministry-card{
+    border:1px solid var(--line-strong); border-radius:4px; background:var(--paper-raised);
+    overflow:hidden; transition:transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease, opacity .5s ease;
+  }
+  .ministry-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
+  .ministry-head-btn{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:20px;
+    display:flex; justify-content:space-between; align-items:center; gap:12px; color:var(--text);
+    border-top:3px solid var(--line-strong);
+  }
+  .ministry-card[data-open="true"] .ministry-head-btn{border-top-color:var(--blue);}
+  .ministry-head-btn h3{font-size:1.02rem; font-family:'Source Serif 4',serif;}
+  .ministry-head-btn .chev{font-family:'JetBrains Mono',monospace; color:var(--text-faint); flex:none; transition:transform .2s ease;}
+  .ministry-card[data-open="true"] .chev{transform:rotate(45deg);}
+  .ministry-panel{max-height:0; overflow:hidden; transition:max-height .28s ease;}
+  .ministry-card[data-open="true"] .ministry-panel{max-height:320px;}
+  .ministry-panel-inner{padding:0 20px 20px; display:grid; gap:12px;}
+  .mp-row{display:flex; justify-content:space-between; gap:10px; font-size:.85rem; padding-top:10px; border-top:1px solid var(--line);}
+  .mp-row .k{color:var(--text-faint); font-family:'JetBrains Mono',monospace; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em;}
+  .mp-row .v{color:var(--text-soft); text-align:right;}
+
+  /* Policy letters */
+  .filter-bar{
+    display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;
+    border:1px solid var(--line-strong); border-radius:4px; padding:14px 16px; margin-bottom:20px; background:var(--paper-raised);
+  }
+  .filter-group{display:flex; gap:10px; flex-wrap:wrap;}
+  select{
+    font-family:'Inter',sans-serif; font-size:.84rem; padding:8px 10px; border:1px solid var(--line-strong);
+    border-radius:4px; background:var(--paper); color:var(--text);
+  }
+  .term-tabs{display:flex; gap:2px; border:1px solid var(--line-strong); border-radius:4px; overflow:hidden;}
+  .term-tabs button{background:var(--paper); border:none; padding:8px 12px; font-size:.8rem; cursor:pointer; color:var(--text-soft);}
+  .term-tabs button[aria-pressed="true"]{background:var(--text); color:var(--paper);}
+  .legend{display:flex; flex-wrap:wrap; gap:18px; font-size:.82rem; color:var(--text-soft); margin-bottom:24px;}
+  .legend b{display:inline-flex; align-items:center; gap:6px; color:var(--text);}
+  .status-tag{
+    font-family:'JetBrains Mono',monospace; font-size:.72rem; padding:3px 9px; border-radius:4px; display:inline-flex; align-items:center; gap:6px;
+  }
+  .status-amber{background:var(--status-amber-bg); color:var(--status-amber);}
+  .status-green{background:var(--status-green-bg); color:var(--status-green);}
+  .letters-empty{
+    border:1px dashed var(--line-strong); border-radius:4px; padding:44px 24px; text-align:center; color:var(--text-soft);
+  }
+  .letters-empty .glyph{font-family:'Source Serif 4',serif; font-size:2rem; color:var(--text-faint); margin-bottom:10px;}
+  .letters-empty p{max-width:46ch; margin-inline:auto;}
+  .letters-empty .sub{font-size:.82rem; color:var(--text-faint); margin-top:8px;}
+  .letters-footnote{margin-top:24px; font-size:.8rem; color:var(--text-faint); display:grid; gap:6px; max-width:64ch;}
+
+  /* Team */
+  .team-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  .team-card{border:1px solid var(--line-strong); border-radius:4px; background:var(--paper-raised); padding:20px; display:flex; flex-direction:column; gap:10px; transition:transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease, opacity .5s ease;}
+  .team-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
+  .avatar-ph{
+    width:48px; height:48px; border-radius:4px; border:1.5px dashed var(--line-strong);
+    display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; color:var(--text-faint); font-size:.7rem;
+  }
+  .team-card h3{font-size:.98rem; font-family:'Source Serif 4',serif;}
+  .team-card .role{font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; color:var(--blue); font-family:'JetBrains Mono',monospace;}
+  .team-card p{font-size:.85rem; color:var(--text-soft); line-height:1.5;}
+  .team-note{margin-top:20px; font-size:.85rem; color:var(--text-faint); max-width:60ch;}
+
+  /* Apply */
+  .apply-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start;}
+  .expect-list{list-style:none; margin:0; padding:0; display:grid; gap:0;}
+  .expect-list li{display:flex; gap:14px; padding-block:14px; border-top:1px solid var(--line);}
+  .expect-list li:first-child{border-top:none;}
+  .expect-list .ei{font-family:'JetBrains Mono',monospace; color:var(--blue); font-size:.78rem; flex:none; padding-top:2px;}
+  .consent-box{
+    margin-top:22px; border:1px solid var(--line-strong); border-left:3px solid var(--accent);
+    padding:16px 18px; border-radius:4px; background:var(--paper-raised); font-size:.85rem; color:var(--text-soft);
+  }
+
+  /* FAQ */
+  .faq-list{border-top:1px solid var(--line);}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%; display:flex; justify-content:space-between; align-items:center; gap:16px;
+    background:none; border:none; text-align:left; cursor:pointer; padding:18px 2px; color:var(--text);
+  }
+  .faq-q span.qt{font-size:1rem; font-weight:600; font-family:'Source Serif 4',serif;}
+  .faq-q .plus{font-family:'JetBrains Mono',monospace; color:var(--blue); flex:none; transition:transform .2s ease;}
+  .faq-item[data-open="true"] .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+  .faq-item[data-open="true"] .faq-a{max-height:260px;}
+  .faq-a p{padding:0 2px 20px; color:var(--text-soft); font-size:.92rem; line-height:1.6; max-width:66ch;}
+
+  /* Contact + footer */
+  .contact-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center;}
+  .contact-card{
+    background:var(--surface-strong); color:var(--on-strong); border-radius:4px; padding:32px;
+    display:grid; gap:16px; transition:background-color .2s ease, color .2s ease;
+  }
+  .contact-card h3{color:var(--on-strong); font-size:1.2rem;}
+  .contact-row{display:flex; justify-content:space-between; gap:12px; padding-block:12px; border-top:1px solid var(--surface-strong-line); font-size:.9rem;}
+  .contact-row:first-of-type{border-top:none;}
+  .contact-row .k{color:var(--on-strong-soft); font-family:'JetBrains Mono',monospace; font-size:.74rem; text-transform:uppercase; letter-spacing:.05em;}
+  .contact-row a{text-decoration:none; border-bottom:1px solid var(--surface-strong-line); color:var(--on-strong);}
+  .contact-row a:hover{border-color:var(--blue-on-dark); color:var(--blue-on-dark);}
+
+  footer.site{padding-block:36px; background:var(--paper);}
+  .footer-row{display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:flex-start;}
+  .footer-links{display:flex; flex-wrap:wrap; gap:18px; font-size:.82rem;}
+  .footer-links a{text-decoration:none; color:var(--text-soft);}
+  .footer-links a:hover{color:var(--blue);}
+  .footer-meta{font-size:.78rem; color:var(--text-faint); max-width:52ch; line-height:1.6;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;}
+  }
+
+  @media (max-width: 900px){
+    .about-grid, .apply-grid, .contact-grid{grid-template-columns:1fr;}
+    .values-grid{grid-template-columns:repeat(2,1fr);}
+    .ministry-grid{grid-template-columns:repeat(2,1fr);}
+    .team-grid{grid-template-columns:repeat(2,1fr);}
+    .stepper{flex-direction:column;}
+    .step{border-right:none; border-bottom:1px solid var(--line);}
+    .step:last-child{border-bottom:none;}
+    .hero-grid{grid-template-columns:1fr;}
+    .doc-stack{max-width:300px; margin-inline:auto;}
+    .masthead-wordmark{font-size:clamp(2.2rem, 7vw, 3.4rem);}
+    .stat-row{flex-direction:column; border-bottom:none;}
+    .stat{border-right:none; border-bottom:1px solid var(--surface-strong-line); padding:16px 0;}
+    .stat:last-child{border-bottom:1px solid var(--surface-strong-line);}
+  }
+
+  @media (max-width: 1400px){
+    nav.primary{
+      position:fixed; top:var(--header-h, 68px); right:0; bottom:0; left:0; background:var(--paper); flex-direction:column; align-items:flex-start;
+      padding:20px; gap:4px; display:none; overflow-y:auto; z-index:39; border-top:1px solid var(--line);
+    }
+    nav.primary.open{display:flex;}
+    nav.primary a{width:100%; padding-block:12px; border-bottom:1px solid var(--line); color:var(--text-soft);}
+    .menu-toggle{display:block;}
+    .nav-cta{display:none;}
+    .brand-text span{display:none;}
+    .nav-apply-mobile{display:block; color:var(--accent); font-weight:600;}
+  }
+
+  @media (max-width: 760px){
+    .hero-inner{padding-block:36px 32px;}
+    .hero-graphic{display:none;}
+    .doc-stack{display:none;}
+    .values-grid{grid-template-columns:1fr;}
+    .ministry-grid{grid-template-columns:1fr;}
+    .team-grid{grid-template-columns:1fr;}
+    .filter-bar{flex-direction:column; align-items:stretch;}
+    section{padding-block:44px;}
+  }
+</style>
+</head>
+<body>
+
+
+<header class="site">
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="nav-shell">
+  <div class="nav-row">
+    <a class="brand" href="#home">
+      <span class="brand-mark"><img class="emblem-img" alt="Youth Shadow Cabinet Uzbekistan emblem"></span>
+      <span class="brand-text">
+        <b>Youth Shadow Cabinet</b>
+        <span>UZBEKISTAN</span>
+      </span>
+    </a>
+    <nav class="primary" id="primaryNav">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#mission" data-i18n="nav.mission">Mission</a>
+      <a href="#how" data-i18n="nav.how">How It Works</a>
+      <a href="#ministries" data-i18n="nav.ministries">Ministries</a>
+      <a href="#letters" data-i18n="nav.letters">Policy Letters</a>
+      <a href="#team" data-i18n="nav.team">Team</a>
+      <a href="#apply" data-i18n="nav.apply" class="nav-apply-mobile">Apply</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="uz" aria-pressed="true">UZ</button>
+        <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-accent nav-cta" href="https://forms.gle/pzbLzT5YL3vkFfuQA" target="_blank" rel="noopener" data-i18n="nav.applyBtn">Apply</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="masthead reveal-in" style="animation-delay:.02s">
+        <div class="masthead-kicker">
+          <span data-i18n="hero.dateline">ISSUE № 01 · 2026 · TASHKENT, UZBEKISTAN</span>
+          <span class="mk-sep">·</span>
+          <span data-i18n="hero.tag1">Student-Led</span>
+          <span class="mk-sep">·</span>
+          <span data-i18n="hero.tag2">Evidence-Based</span>
+          <span class="mk-sep">·</span>
+          <span data-i18n="hero.tag3">Non-Partisan</span>
+        </div>
+        <h1 class="masthead-wordmark"><span data-i18n="hero.titleLine1">Youth Shadow Cabinet</span> <em data-i18n="hero.titleAccent">Uzbekistan</em></h1>
+        <div class="masthead-rule" aria-hidden="true"><span></span><span></span></div>
+      </div>
+      <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="lede reveal-in" style="animation-delay:.14s" data-i18n="hero.subtitle">A student-led civic engagement initiative that gives young people practical experience in understanding, researching, and examining the work of government institutions.</p>
+        <div class="hero-byline reveal-in" style="animation-delay:.18s" data-i18n="hero.byline">Reporting Fellows of YSC Uzbekistan — Tashkent</div>
+        <div class="hero-ctas reveal-in" style="animation-delay:.22s">
+          <a class="btn btn-accent" href="https://forms.gle/pzbLzT5YL3vkFfuQA" target="_blank" rel="noopener" data-i18n="hero.ctaApply">Apply to Join →</a>
+          <a class="btn btn-ghost" href="#letters" data-i18n="hero.ctaLetters">Read Policy Letters →</a>
+        </div>
+        <a class="hero-start reveal-in" style="animation-delay:.3s" href="#how"><span class="q">?</span><span data-i18n="hero.startHere">New to civic monitoring? Start here</span></a>
+        <div class="hero-note reveal-in" style="animation-delay:.38s">
+          <span class="mark">“</span>
+          <p data-i18n="hero.disclaimer">Youth Shadow Cabinet Uzbekistan is not a political party, an opposition organization, or a platform created only to criticize the government. Its purpose is to encourage informed, constructive, and responsible civic participation.</p>
+        </div>
+      </div>
+      <div class="hero-graphic">
+        <div class="hg-glow"></div>
+        <div class="hg-ring"></div>
+        <div class="doc-stack" id="docStack" role="button" tabindex="0">
+          <div class="doc-card doc-back"></div>
+          <div class="doc-card doc-mid"></div>
+          <div class="doc-card doc-front doc-enter">
+            <div class="doc-stamp"><span data-i18n="hero.docStamp">Specimen</span></div>
+            <div class="doc-head">
+              <img class="doc-emblem emblem-img" alt="">
+              <div class="doc-head-text">
+                <b>Youth Shadow Cabinet</b>
+                <span data-i18n="hero.docType">Policy Letter — Draft Form</span>
+              </div>
+            </div>
+            <div class="doc-meta">
+              <div class="doc-meta-row"><span class="k" data-i18n="hero.docTo">To</span><span class="v" id="docToVal">Assigned ministry</span></div>
+              <div class="doc-meta-row"><span class="k" data-i18n="hero.docRe">Re</span><span class="v" id="docReVal">Development under review</span></div>
+              <div class="doc-meta-row"><span class="k" data-i18n="hero.docTerm">Term</span><span class="v" id="docTermVal">2026 · Cycle 01</span></div>
+            </div>
+            <div class="doc-body">
+              <span class="doc-line" style="width:94%"></span>
+              <span class="doc-line" style="width:81%"></span>
+              <span class="doc-line" style="width:88%"></span>
+              <span class="doc-line" style="width:57%"></span>
+            </div>
+            <div class="doc-foot">
+              <span class="status-tag status-amber">🟡 <span data-i18n="letters.legendSubmitted">Submitted to Ministry</span></span>
+              <span class="doc-sig" data-i18n="hero.docSig">Drafted &amp; reviewed by two participants</span>
+            </div>
+          </div>
+        </div>
+        <div class="exhibit-caption" data-i18n="hero.exhibitCaption">FIG. 1 — SPECIMEN POLICY LETTER</div>
+      </div>
+      </div>
+      <div class="stat-row reveal-in" style="animation-delay:.46s">
+        <div class="stat">
+          <div class="n" data-count="3">0</div>
+          <div class="l" data-i18n="hero.stat1">Months per term</div>
+        </div>
+        <div class="stat">
+          <div class="n" data-count="3">0</div>
+          <div class="l" data-i18n="hero.stat2">Languages — UZ / RU / EN</div>
+        </div>
+        <div class="stat">
+          <div class="n" data-count="6" style="color:var(--accent);">0</div>
+          <div class="l" data-i18n="hero.stat3">Steps from assignment to publication</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="num">01</span> <span data-i18n="about.eyebrow">About the Project</span></div>
+        <h2 data-i18n="about.title">Practical experience in examining public institutions</h2>
+      </div>
+      <div class="about-grid">
+        <div class="prose" style="max-width:60ch;">
+          <p data-i18n="about.p1">Youth Shadow Cabinet Uzbekistan is a student-led civic engagement initiative that gives young people practical experience in understanding, researching, and examining the work of government institutions. Each participant is assigned to a government ministry and monitors its recent projects, reforms, investments, programs, achievements, and other public developments. Every month, participants select one significant development, investigate it using reliable sources, review its results, and prepare a short Policy Letter with practical recommendations.</p>
+          <p data-i18n="about.p2">Youth Shadow Cabinet Uzbekistan is not a political party, an opposition organization, or a platform created only to criticize the government. A participant may conclude that a government initiative is successful, that it needs improvement, or that its results are mixed — all of these conclusions are valid if they are supported by reliable evidence.</p>
+        </div>
+        <aside class="about-side">
+          <h3 data-i18n="about.sideTitle">At a Glance</h3>
+          <ul>
+            <li><span data-i18n="about.sideType">Type</span>: <span data-i18n="about.sideTypeVal">Student-led civic engagement &amp; youth policy monitoring</span></li>
+            <li><span data-i18n="about.sideTerm">Term length</span>: <span data-i18n="about.sideTermVal">3 months</span></li>
+            <li><span data-i18n="about.sideContact">Contact</span>: <a href="mailto:info.shadowcabinetuz@gmail.com">info.shadowcabinetuz@gmail.com</a></li>
+            <li><span data-i18n="about.sideTelegram">Telegram</span>: <a href="https://t.me/youthshadowcabinet_uz" target="_blank" rel="noopener">@youthshadowcabinet_uz</a></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="num">02</span> <span data-i18n="mission.eyebrow">Mission &amp; Core Values</span></div>
+        <h2 data-i18n="mission.title">Evidence first, always</h2>
+      </div>
+      <div class="mission-statement">
+        <p data-i18n="mission.statement">To give young people in Uzbekistan practical, evidence-based experience in understanding government institutions and public policy, and a professional, constructive way to participate in civic life.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="vi mono">01</span>
+          <h3 data-i18n="mission.v1t">Evidence-Based</h3>
+          <p data-i18n="mission.v1d">Every claim in a Policy Letter is supported by verifiable, reliable sources — not opinion or assumption.</p>
+        </div>
+        <div class="value-card">
+          <span class="vi mono">02</span>
+          <h3 data-i18n="mission.v2t">Non-Partisan</h3>
+          <p data-i18n="mission.v2d">The project takes no political position of its own; each letter's conclusion follows only from the evidence.</p>
+        </div>
+        <div class="value-card">
+          <span class="vi mono">03</span>
+          <h3 data-i18n="mission.v3t">Constructive</h3>
+          <p data-i18n="mission.v3d">The goal is not criticism for its own sake, but practical, realistic recommendations.</p>
+        </div>
+        <div class="value-card">
+          <span class="vi mono">04</span>
+          <h3 data-i18n="mission.v4t">Professional</h3>
+          <p data-i18n="mission.v4d">All communication — with ministries, the public, and each other — is respectful and measured.</p>
+        </div>
+        <div class="value-card">
+          <span class="vi mono">05</span>
+          <h3 data-i18n="mission.v5t">Transparent</h3>
+          <p data-i18n="mission.v5d">Published letters, review standards, and the project's purpose are all publicly stated, not hidden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="num">03</span> <span data-i18n="how.eyebrow">How It Works</span></div>
+        <h2 data-i18n="how.title">From assignment to publication</h2>
+        <p class="lede" data-i18n="how.intro">Tap a step to read what happens at each stage of a Policy Letter's life cycle.</p>
+      </div>
+      <div class="stepper" id="stepper">
+        <!-- steps injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <section id="ministries">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="num">04</span> <span data-i18n="ministries.eyebrow">Our Ministries</span></div>
+        <h2 data-i18n="ministries.title">Ministries currently monitored</h2>
+        <p class="lede" data-i18n="ministries.intro">Each ministry is followed by an assigned monitor for the current term. Names and photos are shown according to each participant's own visibility preference.</p>
+      </div>
+      <div class="ministry-grid" id="ministryGrid">
+        <!-- cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <section id="letters">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="num">05</span> <span data-i18n="letters.eyebrow">Policy Letters</span></div>
+        <h2 data-i18n="letters.title">Publishing Hub</h2>
+        <p class="lede" data-i18n="letters.intro">Every published letter is the original, evidence-based work of one participant, reviewed before publication and submitted to the relevant ministry.</p>
+      </div>
+
+      <div class="legend">
+        <b><span class="status-tag status-amber">🟡 <span data-i18n="letters.legendSubmitted">Submitted to Ministry</span></span></b>
+        <b><span class="status-tag status-green">🟢 <span data-i18n="letters.legendResponded">Ministry Responded</span></span></b>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-group">
+          <select id="filterMinistry" aria-label="Filter by ministry">
+            <option value="" data-i18n="letters.allMinistries">All ministries</option>
+          </select>
+          <select id="filterMonth" aria-label="Filter by month">
+            <option value="" data-i18n="letters.allMonths">All months</option>
+          </select>
+        </div>
+        <div class="term-tabs" role="group" aria-label="Term">
+          <button type="button" data-term="current" aria-pressed="true" data-i18n="letters.tabCurrent">Current Term</button>
+          <button type="button" data-term="past" aria-pressed="false" data-i18n="letters.tabPast">Past Terms</button>
+        </div>
+      </div>
+
+      <div class="letters-empty" id="lettersEmpty">
+        <div class="glyph">—</div>
+        <p data-i18n="letters.emptyState">No Policy Letters have been published yet. The first cohort's letters will appear here, organized by ministry, as soon as they are reviewed and submitted.</p>
+        <p class="sub" data-i18n="letters.emptySub">Check back soon.</p>
+      </div>
+
+      <div class="letters-footnote">
+        <p data-i18n="letters.foot1">Each letter carries its own permanent link and a downloadable, watermarked PDF once published.</p>
+        <p data-i18n="letters.foot2">Only letters published on this website are the authentic, original versions from Youth Shadow Cabinet Uzbekistan. Altered or unverified copies found elsewhere are not endorsed by us.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="num">06</span> <span data-i18n="team.eyebrow">Leadership &amp; Team</span></div>
+        <h2 data-i18n="team.title">Behind the letters</h2>
+        <p class="lede" data-i18n="team.intro">A team responsible for admissions, research review, and day-to-day operations — working to ensure every published letter meets the same standard of accuracy and professionalism.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="avatar-ph">TBA</div>
+          <h3 data-i18n="team.r1t">Founder</h3>
+          <div class="role mono" data-i18n="team.r1r">Founding &amp; Mentorship</div>
+          <p data-i18n="team.r1d">Originated the project and guides its overall direction.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar-ph">TBA</div>
+          <h3 data-i18n="team.r2t">Research &amp; Policy Review Team</h3>
+          <div class="role mono" data-i18n="team.r2r">Review</div>
+          <p data-i18n="team.r2d">Reviews every Policy Letter for accuracy, source reliability, and balanced language before publication.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar-ph">TBA</div>
+          <h3 data-i18n="team.r3t">Admissions Committee</h3>
+          <div class="role mono" data-i18n="team.r3r">Admissions</div>
+          <p data-i18n="team.r3d">Reviews applications and selects each term's participants.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar-ph">TBA</div>
+          <h3 data-i18n="team.r4t">Communications &amp; SMM Team</h3>
+          <div class="role mono" data-i18n="team.r4r">Communications</div>
+          <p data-i18n="team.r4d">Manages the project's social media and public communications.</p>
+        </div>
+      </div>
+      <p class="team-note" data-i18n="team.note">Full names, photos, and bios for the current term's leadership will be added here closer to launch.</p>
+    </div>
+  </section>
+
+  <section id="apply">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="num">07</span> <span data-i18n="apply.eyebrow">Apply / Join</span></div>
+        <h2 data-i18n="apply.title">Research real policy. Publish real work.</h2>
+        <p class="lede" data-i18n="apply.intro">Apply to join Youth Shadow Cabinet Uzbekistan and be assigned a ministry that matches your interests.</p>
+      </div>
+      <div class="apply-grid">
+        <div>
+          <ul class="expect-list">
+            <li><span class="ei mono">01</span><span data-i18n="apply.e1">Term length: 3 months, with the option to continue based on project needs.</span></li>
+            <li><span class="ei mono">02</span><span data-i18n="apply.e2">One Policy Letter per month, typically 3–4 hours of work.</span></li>
+            <li><span class="ei mono">03</span><span data-i18n="apply.e3">All positions are voluntary — no salary or compensation.</span></li>
+            <li><span class="ei mono">04</span><span data-i18n="apply.e4">You can request full name credit or lighter visibility at any time.</span></li>
+            <li><span class="ei mono">05</span><span data-i18n="apply.e5">Respectful, professional representation of the project is expected in all communication.</span></li>
+          </ul>
+          <div class="consent-box" data-i18n="apply.consent">Applicants under 18 will be asked for guardian awareness as part of the application. No personal contact details are ever published — only ministry, term, and, optionally, name and photo.</div>
+        </div>
+        <div style="border:1px solid var(--line-strong); border-radius:4px; padding:28px; background:var(--paper-raised);">
+          <h3 style="font-family:'Source Serif 4',serif; font-size:1.15rem; margin-bottom:10px;" data-i18n="apply.who">Who can apply?</h3>
+          <p style="color:var(--text-soft); font-size:.92rem; line-height:1.6;" data-i18n="apply.whoDesc">Students aged 15 and older with an interest in government policy, research, and civic engagement. No prior experience required — just roughly 3–4 hours a month and a genuine interest in the field connected to the ministry you choose.</p>
+          <a class="btn btn-accent" style="margin-top:20px;" href="https://forms.gle/pzbLzT5YL3vkFfuQA" target="_blank" rel="noopener" data-i18n="apply.cta">Apply to Join →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="num">08</span> <span data-i18n="faq.eyebrow">FAQ</span></div>
+        <h2 data-i18n="faq.title">Frequently asked questions</h2>
+      </div>
+      <div class="faq-list" id="faqList"></div>
+    </div>
+  </section>
+
+  <section id="contact" style="border-bottom:none;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow"><span class="num">09</span> <span data-i18n="contact.eyebrow">Contact</span></div>
+        <h2 data-i18n="contact.title">Get in touch</h2>
+      </div>
+      <div class="contact-grid">
+        <p class="prose" style="color:var(--text-soft); font-size:1.02rem;" data-i18n="contact.lede">Questions about the project, a correction to a published letter, or interest in mentoring or partnering with us — reach out any time.</p>
+        <div class="contact-card">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <img class="emblem-img" alt="Youth Shadow Cabinet Uzbekistan emblem" style="width:44px; height:44px; object-fit:contain; flex:none;">
+            <h3 style="margin:0;">Youth Shadow Cabinet Uzbekistan</h3>
+          </div>
+          <div class="contact-row"><span class="k mono" data-i18n="contact.email">Email</span><a href="mailto:info.shadowcabinetuz@gmail.com">info.shadowcabinetuz@gmail.com</a></div>
+          <div class="contact-row"><span class="k mono" data-i18n="contact.telegram">Telegram</span><a href="https://t.me/youthshadowcabinet_uz" target="_blank" rel="noopener">@youthshadowcabinet_uz</a></div>
+          <a class="btn btn-on-panel" style="justify-self:start; margin-top:6px;" href="https://forms.gle/pzbLzT5YL3vkFfuQA" target="_blank" rel="noopener" data-i18n="contact.cta">Apply to Join →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap footer-row">
+    <div class="footer-meta">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <img class="emblem-img" alt="Youth Shadow Cabinet Uzbekistan emblem" style="width:30px; height:30px; object-fit:contain; flex:none;">
+        <span class="mono" style="font-size:.78rem; color:var(--text-soft);">© Youth Shadow Cabinet Uzbekistan</span>
+      </div>
+      <span data-i18n="footer.note">Evidence-based, non-partisan, and student-led. If a ministry or reader identifies a factual error in a published letter, contact us — corrections are reviewed by our Research and Policy Review Team and reflected transparently.</span>
+    </div>
+    <div class="footer-links">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#letters" data-i18n="nav.letters">Policy Letters</a>
+      <a href="#apply" data-i18n="nav.apply">Apply</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="https://t.me/youthshadowcabinet_uz" target="_blank" rel="noopener">Telegram</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+
+  var EMBLEM_SRC = "data:image/webp;base64,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";
+  document.querySelectorAll('.emblem-img').forEach(function(img){ img.src = EMBLEM_SRC; });
+
+  var TR = {
+    en: {
+      nav:{about:"About",mission:"Mission",how:"How It Works",ministries:"Ministries",letters:"Policy Letters",team:"Team",apply:"Apply",faq:"FAQ",contact:"Contact",applyBtn:"Apply to Join"},
+      hero:{tag1:"Student-Led",tag2:"Evidence-Based",tag3:"Non-Partisan",
+        titleLine1:"Youth Shadow Cabinet", titleAccent:"Uzbekistan",
+        subtitle:"A student-led civic engagement initiative that gives young people practical experience in understanding, researching, and examining the work of government institutions.",
+        ctaApply:"Apply to Join →", ctaLetters:"Read Policy Letters →",
+        startHere:"New to civic monitoring? Start here",
+        disclaimer:"Youth Shadow Cabinet Uzbekistan is not a political party, an opposition organization, or a platform created only to criticize the government. Its purpose is to encourage informed, constructive, and responsible civic participation.",
+        stat1:"Months per term", stat2:"Languages — UZ / RU / EN", stat3:"Steps from assignment to publication",
+        dateline:"ISSUE № 01 · 2026 · TASHKENT, UZBEKISTAN", exhibitCaption:"FIG. 1 — SPECIMEN POLICY LETTER", byline:"Reporting Fellows of YSC Uzbekistan — Tashkent",
+        step1:"ASSIGN", step2:"MONITOR", step3:"RESEARCH", step4:"LETTER", step5:"REVIEW", step6:"PUBLISH",
+        docType:"Policy Letter — Draft Form", docTo:"To", docToVal:"Assigned ministry", docRe:"Re", docReVal:"Development under review",
+        docTerm:"Term", docTermVal:"2026 · Cycle 01", docSig:"Drafted & reviewed by two participants", docStamp:"Specimen",
+        docHint:"Click the letter to see other examples", docAriaLabel:"Sample policy letter. Press to see another example.",
+        docSamples:[
+          {to:"Ministry of Public Education", re:"Regional school renovation programme", term:"2026 · Cycle 01"},
+          {to:"Ministry of Health", re:"Rural clinic staffing initiative", term:"2026 · Cycle 01"},
+          {to:"Ministry of Digital Technologies", re:"E-government portal accessibility", term:"2026 · Cycle 01"}
+        ]},
+      about:{eyebrow:"About the Project", title:"Practical experience in examining public institutions",
+        p1:"Youth Shadow Cabinet Uzbekistan is a student-led civic engagement initiative that gives young people practical experience in understanding, researching, and examining the work of government institutions. Each participant is assigned to a government ministry and monitors its recent projects, reforms, investments, programs, achievements, and other public developments. Every month, participants select one significant development, investigate it using reliable sources, review its results, and prepare a short Policy Letter with practical recommendations.",
+        p2:"Youth Shadow Cabinet Uzbekistan is not a political party, an opposition organization, or a platform created only to criticize the government. A participant may conclude that a government initiative is successful, that it needs improvement, or that its results are mixed — all of these conclusions are valid if they are supported by reliable evidence.",
+        sideTitle:"At a Glance", sideType:"Type", sideTypeVal:"Student-led civic engagement & youth policy monitoring",
+        sideTerm:"Term length", sideTermVal:"3 months", sideContact:"Contact", sideTelegram:"Telegram"},
+      mission:{eyebrow:"Mission & Core Values", title:"Evidence first, always",
+        statement:"To give young people in Uzbekistan practical, evidence-based experience in understanding government institutions and public policy, and a professional, constructive way to participate in civic life.",
+        v1t:"Evidence-Based", v1d:"Every claim in a Policy Letter is supported by verifiable, reliable sources — not opinion or assumption.",
+        v2t:"Non-Partisan", v2d:"The project takes no political position of its own; each letter's conclusion follows only from the evidence.",
+        v3t:"Constructive", v3d:"The goal is not criticism for its own sake, but practical, realistic recommendations.",
+        v4t:"Professional", v4d:"All communication — with ministries, the public, and each other — is respectful and measured.",
+        v5t:"Transparent", v5d:"Published letters, review standards, and the project's purpose are all publicly stated, not hidden."},
+      how:{eyebrow:"How It Works", title:"From assignment to publication",
+        intro:"Tap a step to read what happens at each stage of a Policy Letter's life cycle.",
+        steps:[
+          {t:"Assignment", d:"Each participant is assigned to one ministry for the duration of their three-month term."},
+          {t:"Monitoring", d:"The participant follows that ministry's real activity — programs, reforms, investments, reports — throughout the month."},
+          {t:"Research", d:"One significant development is selected and investigated using official sources, statistics, and credible reporting."},
+          {t:"Policy Letter", d:"Findings are written into a short, structured letter: what happened, what the evidence shows, an assessment, and 2–3 practical recommendations."},
+          {t:"Review", d:"The letter is reviewed by the Research and Policy Review Team for accuracy, source reliability, and balanced language."},
+          {t:"Publication", d:"Once approved, the letter is published on the website and submitted to the relevant ministry."}
+        ]},
+      ministries:{eyebrow:"Our Ministries", title:"Ministries currently monitored",
+        intro:"Each ministry is followed by an assigned monitor for the current term. Names and photos are shown according to each participant's own visibility preference.",
+        head:"Ministry Head", monitor:"Monitor", tba:"To be announced", tbaShort:"TBA", lettersFrom:"Published letters", lettersNone:"None yet"},
+      letters:{eyebrow:"Policy Letters", title:"Publishing Hub",
+        intro:"Every published letter is the original, evidence-based work of one participant, reviewed before publication and submitted to the relevant ministry.",
+        legendSubmitted:"Submitted to Ministry", legendResponded:"Ministry Responded",
+        allMinistries:"All ministries", allMonths:"All months", tabCurrent:"Current Term", tabPast:"Past Terms",
+        emptyState:"No Policy Letters have been published yet. The first cohort's letters will appear here, organized by ministry, as soon as they are reviewed and submitted.",
+        emptySub:"Check back soon.",
+        foot1:"Each letter carries its own permanent link and a downloadable, watermarked PDF once published.",
+        foot2:"Only letters published on this website are the authentic, original versions from Youth Shadow Cabinet Uzbekistan. Altered or unverified copies found elsewhere are not endorsed by us."},
+      team:{eyebrow:"Leadership & Team", title:"Behind the letters",
+        intro:"A team responsible for admissions, research review, and day-to-day operations — working to ensure every published letter meets the same standard of accuracy and professionalism.",
+        r1t:"Founder", r1r:"Founding & Mentorship", r1d:"Originated the project and guides its overall direction.",
+        r2t:"Research & Policy Review Team", r2r:"Review", r2d:"Reviews every Policy Letter for accuracy, source reliability, and balanced language before publication.",
+        r3t:"Admissions Committee", r3r:"Admissions", r3d:"Reviews applications and selects each term's participants.",
+        r4t:"Communications & SMM Team", r4r:"Communications", r4d:"Manages the project's social media and public communications.",
+        note:"Full names, photos, and bios for the current term's leadership will be added here closer to launch."},
+      apply:{eyebrow:"Apply / Join", title:"Research real policy. Publish real work.",
+        intro:"Apply to join Youth Shadow Cabinet Uzbekistan and be assigned a ministry that matches your interests.",
+        e1:"Term length: 3 months, with the option to continue based on project needs.",
+        e2:"One Policy Letter per month, typically 3–4 hours of work.",
+        e3:"All positions are voluntary — no salary or compensation.",
+        e4:"You can request full name credit or lighter visibility at any time.",
+        e5:"Respectful, professional representation of the project is expected in all communication.",
+        consent:"Applicants under 18 will be asked for guardian awareness as part of the application. No personal contact details are ever published — only ministry, term, and, optionally, name and photo.",
+        who:"Who can apply?", whoDesc:"Students aged 15 and older with an interest in government policy, research, and civic engagement. No prior experience required — just roughly 3–4 hours a month and a genuine interest in the field connected to the ministry you choose.",
+        cta:"Apply to Join →"},
+      faq:{eyebrow:"FAQ", title:"Frequently asked questions",
+        items:[
+          {q:"What is Youth Shadow Cabinet Uzbekistan?", a:"A student-led civic engagement initiative where participants research real government policy and publish evidence-based Policy Letters."},
+          {q:"Is this a political organization?", a:"No. The project takes no political position; each letter's conclusion follows only from the evidence gathered."},
+          {q:"Can a Policy Letter conclude that something is working well?", a:"Yes. A letter's conclusion — positive, negative, or mixed — depends entirely on the evidence, never on a predetermined position."},
+          {q:"Who can apply?", a:"Students aged 15 and older with an interest in government policy, research, and civic engagement. No prior experience is required — just the ability to commit roughly 3–4 hours per month to one Policy Letter, and a genuine interest in the ministry you choose."},
+          {q:"How much time does it take?", a:"Roughly 3–4 hours per month, for one Policy Letter."},
+          {q:"Are all versions of Policy Letters found online authentic?", a:"Only letters published on this website are the authentic, original versions. Altered, edited, or unverified copies found elsewhere are not endorsed by us."},
+          {q:"How are letters reviewed before publication?", a:"Every letter passes through the Research and Policy Review Team — checked for accuracy, source reliability, and balanced language — before it is published or sent to a ministry."},
+          {q:"What happens if a ministry disputes something in a letter?", a:"They can reach us at info.shadowcabinetuz@gmail.com — corrections are reviewed by our Research and Policy Review Team and reflected transparently. A response from the ministry is welcome but never required; our goal is constructive, evidence-based engagement."}
+        ]},
+      contact:{eyebrow:"Contact", title:"Get in touch",
+        lede:"Questions about the project, a correction to a published letter, or interest in mentoring or partnering with us — reach out any time.",
+        email:"Email", telegram:"Telegram", cta:"Apply to Join →"},
+      footer:{note:"Evidence-based, non-partisan, and student-led. If a ministry or reader identifies a factual error in a published letter, contact us — corrections are reviewed by our Research and Policy Review Team and reflected transparently."}
+    },
+
+    ru: {
+      nav:{about:"О проекте",mission:"Миссия",how:"Как это работает",ministries:"Министерства",letters:"Политические письма",team:"Команда",apply:"Подать заявку",faq:"Вопросы",contact:"Контакты",applyBtn:"Подать заявку"},
+      hero:{tag1:"Студенческая инициатива",tag2:"На основе фактов",tag3:"Внепартийная",
+        titleLine1:"Youth Shadow Cabinet", titleAccent:"Uzbekistan",
+        subtitle:"Студенческая гражданская инициатива, которая даёт молодым людям практический опыт изучения и анализа работы государственных органов.",
+        ctaApply:"Подать заявку →", ctaLetters:"Читать письма →",
+        startHere:"Впервые слышите о нас? Начните здесь",
+        disclaimer:"Youth Shadow Cabinet Uzbekistan — не политическая партия, не оппозиционная организация и не площадка для критики ради критики. Цель проекта — поощрять осознанное, конструктивное и ответственное гражданское участие.",
+        stat1:"Месяца длится срок", stat2:"Языка сайта — UZ / RU / EN", stat3:"Этапов от назначения до публикации",
+        dateline:"ВЫПУСК № 01 · 2026 · ТАШКЕНТ, УЗБЕКИСТАН", exhibitCaption:"РИС. 1 — ОБРАЗЕЦ ПИСЬМА ПО ПОЛИТИКЕ", byline:"Авторы — стажёры YSC Узбекистан — Ташкент",
+        step1:"НАЗНАЧЕНИЕ", step2:"МОНИТОРИНГ", step3:"ИССЛЕДОВАНИЕ", step4:"ПИСЬМО", step5:"ПРОВЕРКА", step6:"ПУБЛИКАЦИЯ",
+        docType:"Письмо по политике — черновик", docTo:"Кому", docToVal:"Назначенное министерство", docRe:"Тема", docReVal:"Рассматриваемая инициатива",
+        docTerm:"Срок", docTermVal:"2026 · Цикл 01", docSig:"Составлено и проверено двумя участниками", docStamp:"Образец",
+        docHint:"Нажмите на письмо, чтобы увидеть другие примеры", docAriaLabel:"Образец письма по политике. Нажмите, чтобы увидеть другой пример.",
+        docSamples:[
+          {to:"Министерство народного образования", re:"Программа ремонта региональных школ", term:"2026 · Цикл 01"},
+          {to:"Министерство здравоохранения", re:"Инициатива по кадрам сельских поликлиник", term:"2026 · Цикл 01"},
+          {to:"Министерство цифровых технологий", re:"Доступность портала электронного правительства", term:"2026 · Цикл 01"}
+        ]},
+      about:{eyebrow:"О проекте", title:"Практический опыт изучения государственных институтов",
+        p1:"Youth Shadow Cabinet Uzbekistan — студенческая гражданская инициатива, которая даёт молодым людям практический опыт изучения и анализа работы государственных органов. Каждый участник закрепляется за одним министерством и следит за его проектами, реформами, инвестициями, программами и другими публичными событиями. Каждый месяц участники выбирают одно значимое событие, изучают его по надёжным источникам и готовят короткое Политическое письмо с практическими рекомендациями.",
+        p2:"Youth Shadow Cabinet Uzbekistan — не политическая партия и не оппозиционная организация. Участник может прийти к выводу, что инициатива правительства успешна, требует доработки или имеет смешанные результаты — любой из этих выводов допустим, если он подкреплён надёжными доказательствами.",
+        sideTitle:"Кратко", sideType:"Тип", sideTypeVal:"Студенческая гражданская инициатива и мониторинг молодёжной политики",
+        sideTerm:"Срок участия", sideTermVal:"3 месяца", sideContact:"Контакт", sideTelegram:"Телеграм"},
+      mission:{eyebrow:"Миссия и ценности", title:"Прежде всего — факты",
+        statement:"Дать молодёжи Узбекистана практический, основанный на фактах опыт изучения государственных институтов и государственной политики, а также профессиональный, конструктивный способ участвовать в гражданской жизни.",
+        v1t:"Основано на фактах", v1d:"Каждое утверждение в письме подтверждается проверяемыми, надёжными источниками — не мнением и не предположением.",
+        v2t:"Внепартийность", v2d:"Проект не занимает собственной политической позиции; вывод каждого письма следует только из доказательств.",
+        v3t:"Конструктивность", v3d:"Цель — не критика ради критики, а практические, реалистичные рекомендации.",
+        v4t:"Профессионализм", v4d:"Всё общение — с министерствами, обществом и друг с другом — уважительное и взвешенное.",
+        v5t:"Прозрачность", v5d:"Опубликованные письма, стандарты проверки и цель проекта открыты и не скрываются."},
+      how:{eyebrow:"Как это работает", title:"От назначения до публикации",
+        intro:"Нажмите на этап, чтобы увидеть, что происходит на каждой стадии жизни Политического письма.",
+        steps:[
+          {t:"Назначение", d:"Каждый участник закрепляется за одним министерством на весь трёхмесячный срок."},
+          {t:"Мониторинг", d:"Участник следит за реальной деятельностью министерства — программами, реформами, инвестициями, отчётами — в течение месяца."},
+          {t:"Исследование", d:"Выбирается одно значимое событие и изучается по официальным источникам, статистике и достоверным публикациям."},
+          {t:"Политическое письмо", d:"Результаты оформляются в короткое структурированное письмо: что произошло, что показывают доказательства, оценка и 2–3 практические рекомендации."},
+          {t:"Проверка", d:"Письмо проверяется Командой исследований и проверки политики на точность, надёжность источников и сбалансированность языка."},
+          {t:"Публикация", d:"После одобрения письмо публикуется на сайте и направляется в соответствующее министерство."}
+        ]},
+      ministries:{eyebrow:"Наши министерства", title:"Министерства под наблюдением",
+        intro:"За каждым министерством закреплён участник текущего срока. Имена и фото показываются в соответствии с настройками видимости самого участника.",
+        head:"Руководитель министерства", monitor:"Наблюдатель", tba:"Будет объявлено", tbaShort:"Скоро", lettersFrom:"Опубликованные письма", lettersNone:"Пока нет"},
+      letters:{eyebrow:"Политические письма", title:"Центр публикаций",
+        intro:"Каждое опубликованное письмо — оригинальная, основанная на фактах работа одного участника, прошедшая проверку перед публикацией и направленная в соответствующее министерство.",
+        legendSubmitted:"Направлено в министерство", legendResponded:"Министерство ответило",
+        allMinistries:"Все министерства", allMonths:"Все месяцы", tabCurrent:"Текущий срок", tabPast:"Прошлые сроки",
+        emptyState:"Пока не опубликовано ни одного письма. Письма первого набора появятся здесь, по министерствам, сразу после проверки и подачи.",
+        emptySub:"Загляните позже.",
+        foot1:"У каждого письма есть постоянная ссылка и PDF-версия с водяным знаком после публикации.",
+        foot2:"Подлинными считаются только письма, опубликованные на этом сайте. Изменённые или непроверенные копии, найденные в другом месте, нами не одобрены."},
+      team:{eyebrow:"Руководство и команда", title:"Кто стоит за письмами",
+        intro:"Команда отвечает за приём заявок, проверку исследований и повседневную работу — чтобы каждое опубликованное письмо соответствовало единому стандарту точности и профессионализма.",
+        r1t:"Основатель", r1r:"Основание и наставничество", r1d:"Инициировал проект и определяет его общее направление.",
+        r2t:"Команда исследований и проверки политики", r2r:"Проверка", r2d:"Проверяет каждое письмо на точность, надёжность источников и сбалансированность языка перед публикацией.",
+        r3t:"Приёмная комиссия", r3r:"Приём заявок", r3d:"Рассматривает заявки и отбирает участников каждого срока.",
+        r4t:"Команда коммуникаций и SMM", r4r:"Коммуникации", r4d:"Отвечает за социальные сети и публичные коммуникации проекта.",
+        note:"Полные имена, фото и биографии текущего состава руководства будут добавлены ближе к запуску."},
+      apply:{eyebrow:"Подать заявку", title:"Исследуйте реальную политику. Публикуйте реальную работу.",
+        intro:"Подайте заявку в Youth Shadow Cabinet Uzbekistan, и вам назначат министерство по вашим интересам.",
+        e1:"Срок участия: 3 месяца, с возможностью продления по потребности проекта.",
+        e2:"Одно Политическое письмо в месяц, обычно 3–4 часа работы.",
+        e3:"Все позиции волонтёрские — без зарплаты и компенсации.",
+        e4:"Вы можете в любой момент попросить полное указание имени или более лёгкую видимость.",
+        e5:"Во всех коммуникациях ожидается уважительное, профессиональное представление проекта.",
+        consent:"Заявителям младше 18 лет будет предложено подтвердить осведомлённость опекуна в рамках заявки. Личные контактные данные никогда не публикуются — только министерство, срок и, по желанию, имя и фото.",
+        who:"Кто может подать заявку?", whoDesc:"Студенты от 15 лет, интересующиеся государственной политикой, исследованиями и гражданским участием. Опыт не требуется — нужны примерно 3–4 часа в месяц и искренний интерес к сфере выбранного министерства.",
+        cta:"Подать заявку →"},
+      faq:{eyebrow:"Вопросы", title:"Часто задаваемые вопросы",
+        items:[
+          {q:"Что такое Youth Shadow Cabinet Uzbekistan?", a:"Студенческая гражданская инициатива, в рамках которой участники исследуют реальную государственную политику и публикуют письма на основе фактов."},
+          {q:"Это политическая организация?", a:"Нет. Проект не занимает политической позиции; вывод каждого письма следует только из собранных доказательств."},
+          {q:"Может ли письмо сделать вывод, что что-то работает хорошо?", a:"Да. Вывод письма — положительный, отрицательный или смешанный — полностью зависит от доказательств, а не от заранее заданной позиции."},
+          {q:"Кто может подать заявку?", a:"Студенты от 15 лет, интересующиеся государственной политикой, исследованиями и гражданским участием. Опыт не требуется — нужны примерно 3–4 часа в месяц на одно письмо и искренний интерес к выбранному министерству."},
+          {q:"Сколько времени это занимает?", a:"Примерно 3–4 часа в месяц на одно Политическое письмо."},
+          {q:"Все ли версии писем в интернете подлинные?", a:"Подлинными являются только письма, опубликованные на этом сайте. Изменённые, отредактированные или непроверенные копии в других местах нами не одобрены."},
+          {q:"Как письма проверяются перед публикацией?", a:"Каждое письмо проходит через Команду исследований и проверки политики — проверяются точность, надёжность источников и сбалансированность языка — прежде чем оно публикуется или направляется в министерство."},
+          {q:"Что если министерство оспорит что-то в письме?", a:"Можно написать нам на info.shadowcabinetuz@gmail.com — исправления рассматриваются Командой исследований и проверки политики и вносятся прозрачно. Ответ министерства приветствуется, но не обязателен; наша цель — конструктивное взаимодействие на основе фактов."}
+        ]},
+      contact:{eyebrow:"Контакты", title:"Связаться с нами",
+        lede:"Вопросы о проекте, исправление к опубликованному письму или интерес к наставничеству и партнёрству — пишите в любое время.",
+        email:"Эл. почта", telegram:"Телеграм", cta:"Подать заявку →"},
+      footer:{note:"Основано на фактах, внепартийно и по инициативе студентов. Если министерство или читатель обнаружит фактическую ошибку в опубликованном письме, напишите нам — исправления рассматриваются нашей Командой исследований и проверки политики и вносятся прозрачно."}
+    },
+
+    uz: {
+      nav:{about:"Loyiha haqida",mission:"Missiya",how:"Qanday ishlaydi",ministries:"Vazirliklar",letters:"Siyosat xatlari",team:"Jamoa",apply:"Ariza topshirish",faq:"Savol-javob",contact:"Aloqa",applyBtn:"Ariza topshirish"},
+      hero:{tag1:"Talabalar tashabbusi",tag2:"Dalillarga asoslangan",tag3:"Partiyaviy emas",
+        titleLine1:"Youth Shadow Cabinet", titleAccent:"Uzbekistan",
+        subtitle:"Yoshlarga davlat idoralarining ishini o'rganish, tadqiq qilish va tahlil qilish bo'yicha amaliy tajriba beruvchi talabalar tashabbusi.",
+        ctaApply:"Ariza topshirish →", ctaLetters:"Xatlarni o'qish →",
+        startHere:"Bu loyiha haqida birinchi marta eshityapsizmi? Shu yerdan boshlang",
+        disclaimer:"Youth Shadow Cabinet Uzbekistan — siyosiy partiya, muxolif tashkilot yoki faqat tanqid qilish uchun yaratilgan platforma emas. Loyihaning maqsadi — ongli, konstruktiv va mas'uliyatli fuqarolik ishtirokini rag'batlantirish.",
+        stat1:"Oy davom etadigan muddat", stat2:"Til — UZ / RU / EN", stat3:"Biriktirishdan nashrgacha bosqich",
+        dateline:"№ 01-SON · 2026 · TOSHKENT, O'ZBEKISTON", exhibitCaption:"1-RASM — NAMUNAVIY SIYOSAT XATI", byline:"YSC O'zbekiston muxbirlari — Toshkent",
+        step1:"BIRIKTIRISH", step2:"KUZATUV", step3:"TADQIQOT", step4:"XAT", step5:"KO'RIB CHIQISH", step6:"NASHR",
+        docType:"Siyosat xati — Qoralama shakli", docTo:"Kimga", docToVal:"Biriktirilgan vazirlik", docRe:"Mavzu", docReVal:"Ko'rib chiqilayotgan tashabbus",
+        docTerm:"Muddat", docTermVal:"2026 · 1-bosqich", docSig:"Ikki ishtirokchi tomonidan tayyorlangan", docStamp:"Namuna",
+        docHint:"Boshqa namunalarni ko'rish uchun xatni bosing", docAriaLabel:"Namunaviy siyosat xati. Boshqa namunani ko'rish uchun bosing.",
+        docSamples:[
+          {to:"Xalq ta'limi vazirligi", re:"Hududiy maktablarni ta'mirlash dasturi", term:"2026 · 1-bosqich"},
+          {to:"Sog'liqni saqlash vazirligi", re:"Qishloq poliklinikalari uchun kadrlar tashabbusi", term:"2026 · 1-bosqich"},
+          {to:"Raqamli texnologiyalar vazirligi", re:"Elektron hukumat portali qulayligi", term:"2026 · 1-bosqich"}
+        ]},
+      about:{eyebrow:"Loyiha haqida", title:"Davlat institutlarini o'rganishda amaliy tajriba",
+        p1:"Youth Shadow Cabinet Uzbekistan — yoshlarga davlat idoralarining ishini o'rganish, tadqiq qilish va tahlil qilish bo'yicha amaliy tajriba beruvchi talabalar tashabbusi. Har bir ishtirokchi bitta vazirlikka biriktiriladi va uning so'nggi loyihalari, islohotlari, investitsiyalari, dasturlari va boshqa ochiq faoliyatini kuzatib boradi. Har oy ishtirokchilar bitta muhim voqeani tanlab, uni ishonchli manbalar asosida tadqiq qiladi va amaliy tavsiyalar bilan qisqa Siyosat xati tayyorlaydi.",
+        p2:"Youth Shadow Cabinet Uzbekistan siyosiy partiya yoki muxolif tashkilot emas. Ishtirokchi hukumat tashabbusi muvaffaqiyatli, takomillashtirishga muhtoj yoki natijalari aralash ekanligi haqida xulosaga kelishi mumkin — bu xulosalarning barchasi ishonchli dalillar bilan tasdiqlangan bo'lsa, to'g'ri hisoblanadi.",
+        sideTitle:"Qisqacha", sideType:"Turi", sideTypeVal:"Talabalar tashabbusi va yoshlar siyosatini kuzatish",
+        sideTerm:"Muddat", sideTermVal:"3 oy", sideContact:"Aloqa", sideTelegram:"Telegram"},
+      mission:{eyebrow:"Missiya va qadriyatlar", title:"Avvalo — dalillar",
+        statement:"O'zbekiston yoshlariga davlat institutlari va davlat siyosatini tushunishda amaliy, dalillarga asoslangan tajriba, shuningdek fuqarolik hayotida ishtirok etishning professional va konstruktiv yo'lini berish.",
+        v1t:"Dalillarga asoslangan", v1d:"Siyosat xatidagi har bir da'vo tekshirilishi mumkin bo'lgan, ishonchli manbalar bilan tasdiqlanadi — fikr yoki taxmin bilan emas.",
+        v2t:"Partiyaviy emas", v2d:"Loyiha o'zining siyosiy pozitsiyasiga ega emas; har bir xatning xulosasi faqat dalillardan kelib chiqadi.",
+        v3t:"Konstruktiv", v3d:"Maqsad — tanqid qilish emas, balki amaliy va real tavsiyalar berish.",
+        v4t:"Professional", v4d:"Vazirliklar, jamoatchilik va bir-birimiz bilan barcha muloqot hurmatli va vazmin tarzda olib boriladi.",
+        v5t:"Shaffof", v5d:"Nashr etilgan xatlar, ko'rib chiqish mezonlari va loyihaning maqsadi ochiq e'lon qilingan, yashirin emas."},
+      how:{eyebrow:"Qanday ishlaydi", title:"Biriktirishdan nashr etishgacha",
+        intro:"Siyosat xatining har bir bosqichida nima sodir bo'lishini ko'rish uchun bosqichga bosing.",
+        steps:[
+          {t:"Biriktirish", d:"Har bir ishtirokchi uch oylik muddat davomida bitta vazirlikka biriktiriladi."},
+          {t:"Kuzatuv", d:"Ishtirokchi oy davomida vazirlikning real faoliyati — dasturlar, islohotlar, investitsiyalar, hisobotlar — bilan tanishib boradi."},
+          {t:"Tadqiqot", d:"Bitta muhim voqea tanlanadi va rasmiy manbalar, statistika hamda ishonchli materiallar asosida o'rganiladi."},
+          {t:"Siyosat xati", d:"Natijalar qisqa, tuzilgan xatga jamlanadi: nima sodir bo'ldi, dalillar nimani ko'rsatadi, baho va 2–3 ta amaliy tavsiya."},
+          {t:"Ko'rib chiqish", d:"Xat Tadqiqot va siyosatni ko'rib chiqish jamoasi tomonidan aniqlik, manbalar ishonchliligi va til muvozanati bo'yicha tekshiriladi."},
+          {t:"Nashr etish", d:"Tasdiqlangach, xat veb-saytda e'lon qilinadi va tegishli vazirlikka yuboriladi."}
+        ]},
+      ministries:{eyebrow:"Bizning vazirliklarimiz", title:"Hozirda kuzatilayotgan vazirliklar",
+        intro:"Har bir vazirlikni joriy muddat ishtirokchisi kuzatib boradi. Ism va suratlar ishtirokchining o'z ko'rinish sozlamasiga ko'ra ko'rsatiladi.",
+        head:"Vazirlik rahbari", monitor:"Kuzatuvchi", tba:"Keyinroq e'lon qilinadi", tbaShort:"Tez orada", lettersFrom:"Nashr etilgan xatlar", lettersNone:"Hozircha yo'q"},
+      letters:{eyebrow:"Siyosat xatlari", title:"Nashr markazi",
+        intro:"Har bir nashr etilgan xat — bitta ishtirokchining asl, dalillarga asoslangan ishi bo'lib, nashrdan oldin tekshiriladi va tegishli vazirlikka yuboriladi.",
+        legendSubmitted:"Vazirlikka yuborilgan", legendResponded:"Vazirlik javob berdi",
+        allMinistries:"Barcha vazirliklar", allMonths:"Barcha oylar", tabCurrent:"Joriy muddat", tabPast:"O'tgan muddatlar",
+        emptyState:"Hozircha birorta ham Siyosat xati e'lon qilinmagan. Birinchi guruh xatlari tekshiruvdan o'tib, topshirilgach, shu yerda vazirliklar bo'yicha joylashtiriladi.",
+        emptySub:"Tez orada qaytib ko'ring.",
+        foot1:"Har bir xat nashr etilgach, o'zining doimiy havolasi va yuklab olinadigan, suv belgili PDF nusxasiga ega bo'ladi.",
+        foot2:"Faqat shu veb-saytda joylashtirilgan xatlar Youth Shadow Cabinet Uzbekistan ning asl, o'zgartirilmagan versiyalari hisoblanadi. Boshqa joylarda topilgan o'zgartirilgan yoki tasdiqlanmagan nusxalar biz tomonimizdan tasdiqlanmaydi."},
+      team:{eyebrow:"Rahbariyat va jamoa", title:"Xatlar ortidagi jamoa",
+        intro:"Qabul, tadqiqotlarni ko'rib chiqish va kundalik faoliyat uchun mas'ul jamoa — har bir nashr etilgan xat bir xil aniqlik va professionallik standartiga javob berishini ta'minlaydi.",
+        r1t:"Asoschi", r1r:"Asos solish va murabbiylik", r1d:"Loyihaga asos solgan va uning umumiy yo'nalishini belgilaydi.",
+        r2t:"Tadqiqot va siyosatni ko'rib chiqish jamoasi", r2r:"Ko'rib chiqish", r2d:"Nashr etishdan oldin har bir xatni aniqlik, manbalar ishonchliligi va til muvozanati bo'yicha tekshiradi.",
+        r3t:"Qabul qo'mitasi", r3r:"Qabul", r3d:"Arizalarni ko'rib chiqadi va har bir muddat uchun ishtirokchilarni tanlaydi.",
+        r4t:"Kommunikatsiya va SMM jamoasi", r4r:"Kommunikatsiya", r4d:"Loyihaning ijtimoiy tarmoqlari va ommaviy kommunikatsiyasini boshqaradi.",
+        note:"Joriy muddat rahbariyatining to'liq ismlari, suratlari va tarjimai holi ishga tushirishga yaqinroq shu yerga qo'shiladi."},
+      apply:{eyebrow:"Ariza topshirish", title:"Real siyosatni tadqiq eting. Real ishingizni nashr eting.",
+        intro:"Youth Shadow Cabinet Uzbekistan ga ariza topshiring va qiziqishingizga mos vazirlikka biriktirilasiz.",
+        e1:"Muddat: 3 oy, loyiha ehtiyojiga qarab davom ettirish imkoniyati bilan.",
+        e2:"Oyiga bitta Siyosat xati, odatda 3–4 soatlik ish.",
+        e3:"Barcha lavozimlar ko'ngilli asosda — maosh yoki kompensatsiya yo'q.",
+        e4:"Istalgan vaqtda to'liq ism bilan ko'rsatilishni yoki yengilroq ko'rinishni so'rashingiz mumkin.",
+        e5:"Barcha muloqotda loyihani hurmat bilan va professional tarzda ifodalash kutiladi.",
+        consent:"18 yoshgacha bo'lgan arizachilardan ariza jarayonida vasiyning xabardorligi so'raladi. Shaxsiy aloqa ma'lumotlari hech qachon e'lon qilinmaydi — faqat vazirlik, muddat va, xohishga ko'ra, ism va surat ochiq bo'ladi.",
+        who:"Kim ariza topshira oladi?", whoDesc:"Davlat siyosati, tadqiqot va fuqarolik ishtirokiga qiziqadigan 15 yosh va undan katta talabalar. Oldingi tajriba talab qilinmaydi — oyiga taxminan 3–4 soat vaqt va tanlagan vazirlik sohasiga chin qiziqish yetarli.",
+        cta:"Ariza topshirish →"},
+      faq:{eyebrow:"Savol-javob", title:"Ko'p so'raladigan savollar",
+        items:[
+          {q:"Youth Shadow Cabinet Uzbekistan nima?", a:"Ishtirokchilar real davlat siyosatini tadqiq qilib, dalillarga asoslangan Siyosat xatlarini nashr etadigan talabalar tashabbusi."},
+          {q:"Bu siyosiy tashkilotmi?", a:"Yo'q. Loyiha hech qanday siyosiy pozitsiyani egallamaydi; har bir xatning xulosasi faqat to'plangan dalillardan kelib chiqadi."},
+          {q:"Siyosat xati biror narsa yaxshi ishlayapti degan xulosaga kelishi mumkinmi?", a:"Ha. Xatning xulosasi — ijobiy, salbiy yoki aralash — to'liq dalillarga bog'liq, oldindan belgilangan pozitsiyaga emas."},
+          {q:"Kim ariza topshira oladi?", a:"Davlat siyosati, tadqiqot va fuqarolik ishtirokiga qiziqadigan 15 yosh va undan katta talabalar. Oldingi tajriba shart emas — oyiga bitta xat uchun taxminan 3–4 soat va tanlagan vazirlikka chin qiziqish yetarli."},
+          {q:"Bu qancha vaqt oladi?", a:"Bitta Siyosat xati uchun oyiga taxminan 3–4 soat."},
+          {q:"Internetda topilgan xatlarning barcha versiyalari asl nusxami?", a:"Faqat shu veb-saytda nashr etilgan xatlar asl nusxa hisoblanadi. Boshqa joylarda topilgan o'zgartirilgan yoki tasdiqlanmagan nusxalar biz tomonimizdan tasdiqlanmaydi."},
+          {q:"Xatlar nashrdan oldin qanday tekshiriladi?", a:"Har bir xat nashr etilishi yoki vazirlikka yuborilishidan oldin Tadqiqot va siyosatni ko'rib chiqish jamoasidan — aniqlik, manbalar ishonchliligi va til muvozanati bo'yicha — o'tadi."},
+          {q:"Agar vazirlik xatdagi biror narsaga e'tiroz bildirsa-chi?", a:"Ular info.shadowcabinetuz@gmail.com orqali biz bilan bog'lanishi mumkin — tuzatishlar Tadqiqot va siyosatni ko'rib chiqish jamoasi tomonidan ko'rib chiqiladi va shaffof tarzda aks ettiriladi. Vazirlikdan javob kelishi xush kelibdi, lekin shart emas; bizning maqsadimiz — dalillarga asoslangan konstruktiv muloqot."}
+        ]},
+      contact:{eyebrow:"Aloqa", title:"Biz bilan bog'laning",
+        lede:"Loyiha haqida savollar, nashr etilgan xatga tuzatish yoki murabbiylik/hamkorlikka qiziqish bo'lsa — istalgan vaqtda yozing.",
+        email:"Elektron pochta", telegram:"Telegram", cta:"Ariza topshirish →"},
+      footer:{note:"Dalillarga asoslangan, partiyaviy bo'lmagan va talabalar tomonidan boshqariladigan loyiha. Agar vazirlik yoki o'quvchi nashr etilgan xatda faktik xatoni aniqlasa, biz bilan bog'laning — tuzatishlar Tadqiqot va siyosatni ko'rib chiqish jamoamiz tomonidan ko'rib chiqiladi va shaffof tarzda aks ettiriladi."}
+    }
+  };
+
+  var MINISTRIES = [1,2,3]; // placeholder slots per ToR §10 — real ministries confirmed closer to launch
+
+  function t(lang, path){
+    var parts = path.split('.');
+    var cur = TR[lang];
+    for (var i=0;i<parts.length;i++){
+      if (cur == null) return '';
+      cur = cur[parts[i]];
+    }
+    return cur == null ? '' : cur;
+  }
+
+  function applyI18n(lang){
+    document.documentElement.lang = lang;
+    var nodes = document.querySelectorAll('[data-i18n]');
+    nodes.forEach(function(el){
+      var val = t(lang, el.getAttribute('data-i18n'));
+      if (val) el.textContent = val;
+    });
+    buildStepper(lang);
+    buildMinistries(lang);
+    buildFaq(lang);
+    renderDocSample(lang, docIdx);
+    document.querySelectorAll('.lang-switch button').forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false');
+    });
+    try{ localStorage.setItem('ysc_lang', lang); }catch(e){}
+  }
+
+  var docIdx = 0;
+  var docToVal = document.getElementById('docToVal');
+  var docReVal = document.getElementById('docReVal');
+  var docTermVal = document.getElementById('docTermVal');
+  var docFrontEl = document.querySelector('.doc-front');
+  var docStackEl = document.getElementById('docStack');
+
+  if (docFrontEl){
+    var onFirstEnter = function(e){
+      if (e.target !== docFrontEl) return;
+      docFrontEl.classList.remove('doc-enter');
+      docFrontEl.removeEventListener('animationend', onFirstEnter);
+    };
+    docFrontEl.addEventListener('animationend', onFirstEnter);
+  }
+
+  function renderDocSample(lang, idx){
+    var samples = t(lang, 'hero.docSamples') || [];
+    if (!samples.length) return;
+    var s = samples[idx % samples.length];
+    if (docToVal) docToVal.textContent = s.to || '';
+    if (docReVal) docReVal.textContent = s.re || '';
+    if (docTermVal) docTermVal.textContent = s.term || '';
+    if (docStackEl) docStackEl.setAttribute('aria-label', t(lang, 'hero.docAriaLabel'));
+  }
+
+  function cycleDoc(){
+    if (!docFrontEl || !docStackEl) return;
+    var lang = document.documentElement.lang || 'uz';
+    var samples = t(lang, 'hero.docSamples') || [];
+    if (!samples.length) return;
+    docIdx = (docIdx + 1) % samples.length;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    docStackEl.setAttribute('data-shuffle', String(docIdx % 3));
+    if (reduce){
+      renderDocSample(lang, docIdx);
+      return;
+    }
+    docFrontEl.classList.remove('is-entering', 'doc-enter');
+    docFrontEl.classList.add('is-cycling');
+    var onOut = function(){
+      docFrontEl.removeEventListener('animationend', onOut);
+      renderDocSample(lang, docIdx);
+      docFrontEl.classList.remove('is-cycling');
+      docFrontEl.classList.add('is-entering');
+      var onIn = function(){
+        docFrontEl.removeEventListener('animationend', onIn);
+        docFrontEl.classList.remove('is-entering');
+      };
+      docFrontEl.addEventListener('animationend', onIn);
+    };
+    docFrontEl.addEventListener('animationend', onOut);
+  }
+
+  if (docStackEl){
+    docStackEl.addEventListener('click', cycleDoc);
+    docStackEl.addEventListener('keydown', function(e){
+      if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); cycleDoc(); }
+    });
+    var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced && window.matchMedia && window.matchMedia('(hover: hover)').matches){
+      docStackEl.addEventListener('mousemove', function(e){
+        var r = docStackEl.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        docStackEl.style.setProperty('--tx', (px * 14).toFixed(2) + 'deg');
+        docStackEl.style.setProperty('--ty', (py * -14).toFixed(2) + 'deg');
+      });
+      docStackEl.addEventListener('mouseleave', function(){
+        docStackEl.style.setProperty('--tx', '0deg');
+        docStackEl.style.setProperty('--ty', '0deg');
+      });
+    }
+  }
+
+  function buildStepper(lang){
+    var host = document.getElementById('stepper');
+    var steps = t(lang,'how.steps') || [];
+    host.innerHTML = '';
+    steps.forEach(function(s, i){
+      var el = document.createElement('div');
+      el.className = 'step';
+      el.setAttribute('data-open', i===0 ? 'true' : 'false');
+      el.innerHTML =
+        '<button class="step-btn" aria-expanded="'+(i===0?'true':'false')+'">'+
+          '<span class="sn mono">'+String(i+1).padStart(2,'0')+'</span>'+
+          '<span class="st">'+s.t+'</span>'+
+        '</button>'+
+        '<div class="step-panel"><div class="step-panel-inner">'+s.d+'</div></div>';
+      host.appendChild(el);
+      el.querySelector('.step-btn').addEventListener('click', function(){
+        var wasOpen = el.getAttribute('data-open') === 'true';
+        host.querySelectorAll('.step').forEach(function(s2){
+          s2.setAttribute('data-open','false');
+          s2.querySelector('.step-btn').setAttribute('aria-expanded','false');
+        });
+        if (!wasOpen){
+          el.setAttribute('data-open','true');
+          el.querySelector('.step-btn').setAttribute('aria-expanded','true');
+        }
+      });
+    });
+  }
+
+  function buildMinistries(lang){
+    var host = document.getElementById('ministryGrid');
+    host.innerHTML = '';
+    var headLabel = t(lang,'ministries.head');
+    var monitorLabel = t(lang,'ministries.monitor');
+    var tba = t(lang,'ministries.tba');
+    var lettersFrom = t(lang,'ministries.lettersFrom');
+    var lettersNone = t(lang,'ministries.lettersNone');
+    MINISTRIES.forEach(function(n, i){
+      var el = document.createElement('div');
+      el.className = 'ministry-card';
+      el.setAttribute('data-open','false');
+      el.innerHTML =
+        '<button class="ministry-head-btn" aria-expanded="false">'+
+          '<h3>'+(lang==='ru'?'Министерство ':(lang==='uz'?'Vazirlik ':'Ministry '))+(i+1)+'</h3>'+
+          '<span class="chev mono">+</span>'+
+        '</button>'+
+        '<div class="ministry-panel"><div class="ministry-panel-inner">'+
+          '<div class="mp-row"><span class="k">'+headLabel+'</span><span class="v">'+tba+'</span></div>'+
+          '<div class="mp-row"><span class="k">'+monitorLabel+'</span><span class="v">'+tba+'</span></div>'+
+          '<div class="mp-row"><span class="k">'+lettersFrom+'</span><span class="v">'+lettersNone+'</span></div>'+
+        '</div></div>';
+      host.appendChild(el);
+      el.querySelector('.ministry-head-btn').addEventListener('click', function(){
+        var open = el.getAttribute('data-open') === 'true';
+        el.setAttribute('data-open', open ? 'false':'true');
+        el.querySelector('.ministry-head-btn').setAttribute('aria-expanded', open ? 'false':'true');
+      });
+    });
+  }
+
+  function buildFaq(lang){
+    var host = document.getElementById('faqList');
+    host.innerHTML = '';
+    var items = t(lang,'faq.items') || [];
+    items.forEach(function(it){
+      var el = document.createElement('div');
+      el.className = 'faq-item';
+      el.setAttribute('data-open','false');
+      el.innerHTML =
+        '<button class="faq-q" aria-expanded="false"><span class="qt">'+it.q+'</span><span class="plus mono">+</span></button>'+
+        '<div class="faq-a"><p>'+it.a+'</p></div>';
+      host.appendChild(el);
+      el.querySelector('.faq-q').addEventListener('click', function(){
+        var open = el.getAttribute('data-open') === 'true';
+        el.setAttribute('data-open', open ? 'false':'true');
+        el.querySelector('.faq-q').setAttribute('aria-expanded', open ? 'false':'true');
+      });
+    });
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      applyI18n(btn.getAttribute('data-lang'));
+    });
+  });
+
+  var menuBtn = document.getElementById('menuToggle');
+  var nav = document.getElementById('primaryNav');
+  var siteHeader = document.querySelector('header.site');
+  function syncHeaderHeight(){
+    if (siteHeader){
+      document.documentElement.style.setProperty('--header-h', siteHeader.getBoundingClientRect().height + 'px');
+    }
+  }
+  syncHeaderHeight();
+  window.addEventListener('resize', syncHeaderHeight);
+  if (document.fonts && document.fonts.ready){
+    document.fonts.ready.then(syncHeaderHeight);
+  }
+  menuBtn.addEventListener('click', function(){
+    syncHeaderHeight();
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); });
+  });
+
+  var termTabs = document.querySelectorAll('.term-tabs button');
+  termTabs.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      termTabs.forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+      btn.setAttribute('aria-pressed','true');
+    });
+  });
+
+  var startLang = 'uz';
+  try{
+    var saved = localStorage.getItem('ysc_lang');
+    if (saved && TR[saved]) startLang = saved;
+  }catch(e){}
+  applyI18n(startLang);
+
+  (function countUpStats(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var nodes = document.querySelectorAll('.stat .n[data-count]');
+    if (!nodes.length) return;
+    if (reduce){
+      nodes.forEach(function(el){ el.textContent = el.getAttribute('data-count'); });
+      return;
+    }
+    var started = false;
+    function run(){
+      if (started) return;
+      started = true;
+      nodes.forEach(function(el){
+        var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+        var start = performance.now();
+        var dur = 700;
+        function tick(now){
+          var p = Math.min(1, (now - start) / dur);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(eased * target);
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }
+    setTimeout(run, 640);
+  })();
+
+  (function scrollReveal(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    var targets = document.querySelectorAll('.section-head, .mission-statement, .about-side');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('sr-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -8% 0px'});
+    targets.forEach(function(el){
+      el.classList.add('sr-hidden');
+      io.observe(el);
+    });
+
+    // Staggered reveal for card grids
+    var groupSelectors = ['.values-grid', '.ministry-grid', '.team-grid', '.stepper'];
+    groupSelectors.forEach(function(sel){
+      var grid = document.querySelector(sel);
+      if (!grid) return;
+      var cards = Array.prototype.slice.call(grid.children);
+      var gio = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting){
+            cards.forEach(function(card, i){
+              card.classList.add('sr-hidden');
+              card.style.transitionDelay = (i * 70) + 'ms';
+              requestAnimationFrame(function(){ card.classList.add('sr-visible'); });
+            });
+            gio.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.1, rootMargin:'0px 0px -6% 0px'});
+      cards.forEach(function(card){ card.classList.add('sr-hidden'); });
+      gio.observe(grid);
+    });
+  })();
+
+  (function scrollProgress(){
+    var bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+    function update(){
+      var h = document.documentElement, b = document.body;
+      var scrollTop = window.pageYOffset || h.scrollTop || b.scrollTop || 0;
+      var scrollHeight = Math.max(h.scrollHeight, b.scrollHeight);
+      var clientHeight = window.innerHeight || h.clientHeight;
+      var height = scrollHeight - clientHeight;
+      var pct = height > 0 ? Math.min(100, Math.max(0, (scrollTop / height) * 100)) : 0;
+      bar.style.width = pct + '%';
+    }
+    document.addEventListener('scroll', update, {passive:true});
+    window.addEventListener('scroll', update, {passive:true});
+    window.addEventListener('resize', update);
+    update();
+  })();
+})();
+</script>
+
+</body>
+</html>
